@@ -1,6 +1,6 @@
 import Slider from "@/components/home/first-slider/slider";
 import GreenBlock from "@/components/home/green-block";
-import Image from "next/image";
+import SliderSecond from "@/components/home/second-slider/slider";
 
 export default function Home() {
   return (
@@ -11,6 +11,8 @@ export default function Home() {
         <GreenBlock text='Explore Australia'/>
       </div>
       <Slider />
+      <h1 className="mt-[110px] text-[48px] leading-[59px] font-medium">Explore where<br/>you want.</h1>
+      <SliderSecond />
     </main>
   );
 }
