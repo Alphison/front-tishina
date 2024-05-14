@@ -1,11 +1,12 @@
 "use client"
 
-import { Pagination } from "swiper/modules"
 import Category from "./category"
 import { Swiper, SwiperSlide } from "swiper/react"
 import 'swiper/css';
-import 'swiper/css/pagination';
 import './style.css' 
+import Slide from "./slide/slide";
+import 'swiper/css/navigation'
+import { Autoplay, Navigation } from "swiper/modules";
 
 
 export default function SliderSecond () {
@@ -17,15 +18,40 @@ export default function SliderSecond () {
                 <Category text="Villas" status={false} />
                 <Category text="A-Forms" status={false} />
             </div>
+          
             <Swiper
-                slidesPerView={3}
+                loop={true}
+                slidesPerView={4}
                 spaceBetween={20}
-                className="mySwiper mt-[59px]"
+                // autoplay={{
+                //     delay: 2500,
+                //     disableOnInteraction: false,
+                // }}
+                navigation={true}
+                modules={[Autoplay, Navigation]}
+                className="mySwiper mySwiper-second relative"
             >
-                <SwiperSlide>
-                    
+                <SwiperSlide className="swiperSlide">
+                    <Slide />
                 </SwiperSlide>
+                <SwiperSlide className="swiperSlide">
+                    <Slide />
+                </SwiperSlide>
+                <SwiperSlide className="swiperSlide">
+                    <Slide />
+                </SwiperSlide>
+                <SwiperSlide className="swiperSlide">
+                    <Slide />
+                </SwiperSlide>
+                <SwiperSlide className="swiperSlide">
+                    <Slide />
+                </SwiperSlide>
+                <SwiperSlide className="swiperSlide">
+                    <Slide />
+                </SwiperSlide>       
+                <div className="bgSlider"></div>
             </Swiper>
+                      
         </div>
     )
 }
