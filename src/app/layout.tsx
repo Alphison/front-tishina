@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/header";
+import Provider from "./provider";
 
 const plus = Plus_Jakarta_Sans({ subsets: ["latin", "cyrillic-ext"], weight: ["200" , "300" , "400" , "500" , "600" , "700" , "800"]});
 
@@ -18,8 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={plus.className}>
-        <Header />
-        {children}
+        <Provider>
+          <Header />
+          {children}
+        </Provider>
       </body>
     </html>
   );
