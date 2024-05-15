@@ -1,6 +1,7 @@
 import Slider from "@/components/home/first-slider/slider";
 import GreenBlock from "@/components/home/green-block";
 import SliderSecond from "@/components/home/second-slider/slider";
+import WhiteBlocks from "@/components/home/white-blocks/white-blocks";
 import Image from "next/image";
 
 export default function Home() {
@@ -47,6 +48,14 @@ export default function Home() {
           </div>
           <button className="bg-white text-black font-semibold hover:text-white hover:bg-[#4E6F54] transition-all duration-300 hover:scale-[1.1] rounded-[10px] py-[18px] px-[28px] absolute bottom-[60px] left-[60px]">Best price for rents</button>
         </div>
+      </div>
+
+      <div className="mt-[109px]">
+        <div className="flex flex-wrap justify-between w-[90%] items-center">
+            <h1 className="text-[40px] w-[444px] font-bold leading-[56px]">We make it easy for tenants and landlords.</h1>
+            <p className="text-[16px] w-[400px] leading-[25px]">Whether it’s selling your current home, getting financing, or buying a new home, we make it easy  and efficient. The best part? you’ll save a bunch of money and time with our services.</p>
+        </div>
+        <WhiteBlocks />
       </div>
     </main>
   );

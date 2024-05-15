@@ -19,6 +19,18 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: #050505;
+  color: white !important;
+}
+
+body::-webkit-scrollbar{
+  background: none;
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: #4E6F54;
+  width: 5px;
+  border-radius: 100px;
 }
 
 @layer utilities {

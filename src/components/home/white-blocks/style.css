@@ -1,0 +1,9 @@
+.whiteBlocks::-webkit-scrollbar{
+    background: none;
+    width: 5px;
+  }
+  
+  .whiteBlocks::-webkit-scrollbar-thumb{
+    background: #4E6F54;
+    border-radius: 100px;   
+  }
