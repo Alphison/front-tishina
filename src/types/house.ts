@@ -9,6 +9,11 @@ export interface IHouse {
     price: number;
     address: string;
     small_description: string;
+    images: IImage[];
+}
+
+interface IImage {
+    src: string;
 }
 
 export interface IHouses {

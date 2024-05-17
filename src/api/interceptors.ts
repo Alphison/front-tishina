@@ -1,5 +1,5 @@
 import { getAccessToken, removeFromStorage } from "@/services/auth-token.service";
-import axios ,  { CreateAxiosDefaults } from "axios";
+import axios, { CreateAxiosDefaults } from "axios";
 import { errorCatch } from "./error";
 
 const options: CreateAxiosDefaults = {

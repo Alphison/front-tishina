@@ -1,6 +1,5 @@
 "use client"
 
-import Category from "./category"
 import { Swiper, SwiperSlide } from "swiper/react"
 import 'swiper/css';
 import './style.css' 
@@ -11,6 +10,7 @@ import { useQuery } from "@tanstack/react-query";
 import { houseSerivce } from "@/services/house.service";
 import { IHouse } from "@/types/house";
 import Loader from "@/components/Loader";
+import Categories from "./Categories/Categories";
 
 
 export default function SliderSecond () {    
@@ -31,12 +31,7 @@ export default function SliderSecond () {
 
     return (
         <div className="mt-[89px]">
-            <div className="flex border-b-[0.5px] border-[#272727]">
-                <Category text="Best matches" status={true} />
-                <Category text="Aparts" status={false} />
-                <Category text="Villas" status={false} />
-                <Category text="A-Forms" status={false} />
-            </div>
+            <Categories />
           
             <Swiper
                 loop={true}
@@ -52,7 +47,7 @@ export default function SliderSecond () {
             >
                 {
                     isLoading ?
-                     <Loader />
+                     <Loader w={80}/>
                     : data ?
                         data.map((house: IHouse, i: number) => {
                             return (

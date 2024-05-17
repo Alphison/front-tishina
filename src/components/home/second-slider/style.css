@@ -7,6 +7,10 @@
     cursor: pointer;
 }
 
+.swiperSlide:hover{
+    scale: 1.1;
+}
+
 .bgSlide{
     position: absolute;
     z-index: -1;
