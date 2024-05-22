@@ -1,15 +1,17 @@
 import { ICategory } from "./category";
 
 export interface IHouse {
-    id: number;
-    name: string;
-    description: string;
-    preview: string;
-    category: ICategory;
-    price: number;
-    address: string;
-    small_description: string;
-    images: IImage[];
+    data: {
+        id: number;
+        name: string;
+        description: string;
+        preview: string;
+        category: ICategory;
+        price: number;
+        address: string;
+        small_description: string;
+        images: IImage[];
+    }    
 }
 
 interface IImage {
