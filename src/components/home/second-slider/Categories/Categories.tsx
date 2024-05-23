@@ -20,7 +20,7 @@ export default function Categories() {
 
     return (
         <div className="flex border-b-[0.5px] border-[#272727]">
-            <Category text="Все дома" status={true} />
+            <Category text="Все" status={true} />
             {
                 isLoading ? 
                 <Loader w={30}/>

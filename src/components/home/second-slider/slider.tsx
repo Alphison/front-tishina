@@ -6,20 +6,18 @@ import './style.css'
 import Slide from "./slide/slide";
 import 'swiper/css/navigation'
 import { Autoplay, Navigation } from "swiper/modules";
-import { useQuery } from "@tanstack/react-query";
-import { houseSerivce } from "@/services/house.service";
 import { IHouse } from "@/types/house";
 import Loader from "@/components/Loader";
 import Categories from "./Categories/Categories";
+import { useHouses } from "@/hooks/useHouses";
+import { useRouter } from "next/navigation";
 
 
 export default function SliderSecond () {    
 
-    const {data, isLoading, error} = useQuery({
-        queryKey: ['houses'],
-        queryFn: () => houseSerivce.getAll(),
-        select: ({data}) => data.data 
-    })
+    const router = useRouter()
+
+    const {data, isLoading, error} = useHouses()
 
     if(error){
         return (
@@ -51,7 +49,7 @@ export default function SliderSecond () {
                     : data ?
                         data.map((house: IHouse, i: number) => {
                             return (
-                                <SwiperSlide className="swiperSlide" key={i}>
+                                <SwiperSlide className="swiperSlide" key={i} onClick={() => router.push(`/house/${house.id}`)}>
                                     <Slide house={house}/>
                                 </SwiperSlide> 
                             )                            

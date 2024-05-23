@@ -4,7 +4,7 @@ import "swiper/css";
 import "../../house/style.css"
 import { Autoplay } from "swiper/modules";
 
-export default function Slider() {
+export default function Slider({images}: {images: string[]}) {
 
 
     return (
@@ -16,15 +16,13 @@ export default function Slider() {
         }}
         modules={[Autoplay]}
         className="mySwiper sliderHouse">
-            <SwiperSlide className="houseSlide cursor-grab">
-                <Image src="/images/foto.jpg" width={1240} height={600} alt=""/>
-            </SwiperSlide>
-            <SwiperSlide className="houseSlide">
-                <Image src="/images/foto.jpg" width={1240} height={600} alt=""/>
-            </SwiperSlide>
-            <SwiperSlide className="houseSlide">
-                <Image src="/images/foto.jpg" width={1240} height={600} alt=""/>
-            </SwiperSlide>
+            {
+                images.map((image, i) => [
+                    <SwiperSlide className="houseSlide cursor-grab">
+                        <Image loader={() => image} key={i} src={image} width={1240} height={600} alt=""/>
+                    </SwiperSlide>
+                ])
+            }
         </Swiper>
     )
 }
