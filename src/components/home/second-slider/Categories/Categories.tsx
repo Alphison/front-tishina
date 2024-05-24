@@ -2,13 +2,24 @@ import { categorySerivce } from "@/services/category.service";
 import Category from "./category";
 import { useQuery } from "@tanstack/react-query";
 import Loader from "@/components/Loader";
+import { useState } from "react";
 
-export default function Categories() {
+export default function Categories({setCategoryIdFun}: {setCategoryIdFun: (id: number) => void}) {
     const {data, isLoading, error} = useQuery({
         queryKey: ['categories'],
         queryFn: () => categorySerivce.getAll(),
         select: ({data}) => data.data 
     }) 
+
+    const [category_id, setCategoryId] = useState<number>(0)
+
+
+    const clickCategoryHandle = (id:number) => {
+        
+        setCategoryId(id)
+        setCategoryIdFun(id)
+
+    }
 
     if(error){
         return (
@@ -20,13 +31,17 @@ export default function Categories() {
 
     return (
         <div className="flex border-b-[0.5px] border-[#272727]">
-            <Category text="Все" status={true} />
+            <button onClick={() => clickCategoryHandle(0)}>
+                <Category text="Все" status={category_id === 0 ? true : false}/>
+            </button>
             {
                 isLoading ? 
                 <Loader w={30}/>
                 : data ?
                 data.map((category, i) => {
-                    return <Category text={category.name} status={false} key={i}/>
+                    return <button onClick={() => clickCategoryHandle(category.id)}>
+                        <Category text={category.name} status={category_id === category.id ? true : false} key={i}/>
+                    </button>
                 } ) 
                 : "Категорий больше нет..."
             }

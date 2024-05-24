@@ -11,9 +11,23 @@ import Loader from "@/components/Loader";
 import Categories from "./Categories/Categories";
 import { useHouses } from "@/hooks/useHouses";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 
 export default function SliderSecond () {    
+    const [houses, setHouses] = useState<IHouse[]>([])
+
+    const setCategoryIdFun = (id: number) => {
+
+        if(data){
+
+            const housesFilter = data.filter(item => item.category.id === id)
+
+            setHouses(housesFilter)
+
+        }
+
+    }
 
     const router = useRouter()
 
@@ -29,7 +43,7 @@ export default function SliderSecond () {
 
     return (
         <div className="mt-[89px]">
-            <Categories />
+            <Categories setCategoryIdFun={setCategoryIdFun}/>
           
             <Swiper
                 loop={true}
@@ -46,6 +60,14 @@ export default function SliderSecond () {
                 {
                     isLoading ?
                      <Loader w={80}/>
+                    : houses.length > 0 ?
+                        houses.map((house: IHouse, i: number) => {
+                            return (
+                                <SwiperSlide className="swiperSlide" key={i} onClick={() => router.push(`/house/${house.id}`)}>
+                                    <Slide house={house}/>
+                                </SwiperSlide> 
+                            )                            
+                        })
                     : data ?
                         data.map((house: IHouse, i: number) => {
                             return (

@@ -1,0 +1,31 @@
+.booked{
+    background: rgb(177, 74, 74) !important;
+    color: white !important;
+}
+.react-calendar{
+    background: #ffffff1e !important;
+    width: 100% !important;
+    border: none !important;
+    font-family: var(--font-mont) !important;
+    backdrop-filter: blur(100px) !important;
+    border-radius: 30px;
+    margin: 20px auto;
+}
+.react-calendar__tile{
+    padding: 30px !important;
+}
+.react-calendar__tile:hover{
+    background: #4E6F54 !important;
+}
+.react-calendar__month-view__days__day--weekend{
+    color: #235f23 !important;
+}
+.react-calendar__tile--active{
+    background: #4E6F54 !important;
+    color: white !important;;
+}
+
+.react-calendar__tile--now{
+    background: rgb(85, 85, 156) !important;
+    color: white !important;;
+}

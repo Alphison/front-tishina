@@ -1,9 +1,11 @@
 import Image from "next/image";
+import CalendarComponent from "./Calendar/calendar";
 
 export default function BroniForm () {
     return (
         <div className="mt-[47px] flex flex-col gap-[20px]">
             <h1>Выберите даты бронирования:</h1>
+            <CalendarComponent />
             <div className="flex gap-[11px]">
                 <div className="bg-white py-[17px] px-[25px] flex gap-[19px] items-center rounded-[100px]">
                     <Image src={'/images/calendar-days.svg'} alt="" width={21} height={24}/>
