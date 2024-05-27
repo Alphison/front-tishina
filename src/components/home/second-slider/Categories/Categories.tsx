@@ -39,8 +39,8 @@ export default function Categories({setCategoryIdFun}: {setCategoryIdFun: (id: n
                 <Loader w={30}/>
                 : data ?
                 data.map((category, i) => {
-                    return <button onClick={() => clickCategoryHandle(category.id)}>
-                        <Category text={category.name} status={category_id === category.id ? true : false} key={i}/>
+                    return <button onClick={() => clickCategoryHandle(category.id)} key={i}>
+                        <Category text={category.name} status={category_id === category.id ? true : false}/>
                     </button>
                 } ) 
                 : "Категорий больше нет..."

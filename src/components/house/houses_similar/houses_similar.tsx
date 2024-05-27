@@ -4,7 +4,7 @@ import Loader from "@/components/Loader";
 import { useEffect, useState } from "react";
 import { IHouse } from "@/types/house";
 
-export default function Houses({category_id}: {category_id: number}) {
+export default function Houses({category_id, house_id}: {category_id: number, house_id:number}) {
 
     const {data, isLoading, error} = useHouses()
 
@@ -12,7 +12,7 @@ export default function Houses({category_id}: {category_id: number}) {
 
     useEffect(() => {
         if(data){
-            const items = data.filter(item => item.category.id === category_id)
+            const items = data.filter(item => item.category.id === category_id && item.id != house_id)
             setNewData(items)
         }
     }, [data])

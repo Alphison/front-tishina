@@ -2,6 +2,7 @@
 
 import Loader from "@/components/Loader";
 import BroniForm from "@/components/house/BroniForm";
+import CalendarComponent from "@/components/house/Calendar/calendar";
 import Block from "@/components/house/block";
 import Houses from "@/components/house/houses_similar/houses_similar";
 import Slider from "@/components/house/slider/slider";
@@ -35,7 +36,8 @@ export default function Page({params}: {params: {id: string}}) {
     }
 
     return (
-        <div className="overflow-hidden">            
+        <div className="overflow-hidden">      
+            <CalendarComponent houseUsers={data.houseUsers}/>
             <div className="w-[1240px] mx-auto">
                 <Slider images={images}/>
                 <div className="mt-[65px]">
@@ -58,7 +60,7 @@ export default function Page({params}: {params: {id: string}}) {
                     </div>
                 </div>
                 <BroniForm />
-                <Houses category_id={data.category.id}/>
+                <Houses category_id={data.category.id} house_id={data.id}/>
             </div>
         </div>
     )

@@ -1,4 +1,5 @@
 import { ICategory } from "./category";
+import { IHouseUsers } from "./houseUsers";
 
 export interface IHouse {
     id: number;
@@ -10,7 +11,8 @@ export interface IHouse {
     address: string;
     small_description: string;
     images: IImage[];
-    features: IFeature[];        
+    features: IFeature[];
+    houseUsers: IHouseUsers[];        
 }
 
 export interface IHouseWithOptionalData {
