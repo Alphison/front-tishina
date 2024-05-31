@@ -1,6 +1,5 @@
-import { getAccessToken, removeFromStorage } from "@/services/auth-token.service";
+import { getAccessToken } from "@/services/auth-token.service";
 import axios, { CreateAxiosDefaults } from "axios";
-import { errorCatch } from "./error";
 
 const options: CreateAxiosDefaults = {
     baseURL: process.env.NEXT_PUBLIC_API,
@@ -12,15 +11,15 @@ const options: CreateAxiosDefaults = {
 
 export const axiosClassic = axios.create(options)
 
-// export const axiosWithAuth = axios.create(options)
+export const axiosWithAuth = axios.create(options)
 
-// axiosWithAuth.interceptors.request.use(config => {
-//     const accessToken = getAccessToken()
+axiosWithAuth.interceptors.request.use(config => {
+    const accessToken = getAccessToken()
 
-//     if(config?.headers && accessToken) config.headers.Authorization = `Bearer ${accessToken}`
+    if(config?.headers && accessToken) config.headers.Authorization = `Bearer ${accessToken}`
 
-//     return config
-// })
+    return config
+})
 
 // axiosWithAuth.interceptors.response.use(
 //     config => config,

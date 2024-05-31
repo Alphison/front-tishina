@@ -15,6 +15,17 @@ export interface IHouse {
     houseUsers: IHouseUsers[];        
 }
 
+export interface IHouseSmall {
+    id: number;
+    name: string;
+    description: string;
+    preview: string;
+    category: ICategory;
+    price: number;
+    address: string;
+    small_description: string;
+}
+
 export interface IHouseWithOptionalData {
     data?: IHouse;
 }

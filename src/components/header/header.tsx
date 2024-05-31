@@ -5,7 +5,7 @@ import BtnAuth from "./btnAuth";
 export default function Header(){
 
     return (
-        <header className="flex items-center justify-between w-full mx-auto mt-[100px] px-[50px]">
+        <header className="flex items-center justify-between w-full mx-auto pt-[100px] px-[50px]">
             <div className="flex items-end gap-[52px]">
                 <Link href={'/'}>
                     <Image src={'/images/Logo.svg'} width={155} height={30} alt=""/>
