@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/header/header";
 import Provider from "./provider";
 import Modal from "@/components/modal/modal";
+import { Toaster } from "sonner";
+import ProviderAuth from "./providerAuth";
 
 const plus = Plus_Jakarta_Sans({ subsets: ["latin", "cyrillic-ext"], weight: ["200" , "300" , "400" , "500" , "600" , "700" , "800"], variable: '--font-plus'});
 const mont = Montserrat({subsets: ["latin", "cyrillic-ext"], weight: ["200" , "300" , "400" , "500" , "600" , "700" , "800"], variable: '--font-mont'}) 
@@ -22,9 +24,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${plus.variable} ${mont.variable} font-sans`}>
         <Provider>
-          <Modal />
-          <Header />
-          {children}
+          <ProviderAuth>
+            <Toaster position="bottom-right"/>
+            <Modal />
+            <Header />
+            {children}
+          </ProviderAuth>
         </Provider>
       </body>
     </html>

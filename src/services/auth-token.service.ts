@@ -6,6 +6,7 @@ export const getAccessToken = () => {
 }
 
 export const saveTokenStorage = (accessToken: string) => {
+    
     Cookies.set('access_token', accessToken, {
         domain: 'localhost',
         sameSite: 'strict',

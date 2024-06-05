@@ -8,7 +8,7 @@ type State = {
 }
   
 type Action = {
-    setStatus: (number: number) => void,
+    setStatus: (number?: number) => void,
     setDates: (date: Date | null) => void
 }
 
