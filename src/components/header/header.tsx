@@ -9,7 +9,7 @@ export default function Header(){
                 <Link href={'/'}>
                     <Image src={'/images/Logo.svg'} width={155} height={30} alt=""/>
                 </Link>
-                <nav className="flex gap-[30px] items-center">
+                <nav className="gap-[30px] items-center hidden 800:flex">
                     <Link href={'/profile'} className="text-[17px] font-medium">Профиль</Link>
                     <Link href={'/'} className="text-[17px] font-medium">Unique Activities</Link>
                     <Link href={'/'} className="text-[17px] font-medium">More</Link>

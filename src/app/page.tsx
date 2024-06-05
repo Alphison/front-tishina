@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-        <div className="w-full 1238:w-[1238px] mx-auto px-[50px] 1238:px-[0px]">
+        <div className="w-full 1238:max-w-[1238px] mx-auto px-[50px]">
 
           <div className="flex flex-wrap gap-[33px] mt-[65px]">
             <GreenBlock text='Explore Australia'/>

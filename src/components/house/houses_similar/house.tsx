@@ -5,7 +5,9 @@ import { IHouse } from "@/types/house";
 export default function House({item}: {item: IHouse}){
     return (
         <div className="flex gap-[24px]">
-            <Image className="rounded-[16px] h-[271px] object-cover" loader={() => item.preview} src={item.preview} alt="" width={450} height={271}/>
+            <div className="min-w-[450px]">
+                <Image className="rounded-[16px] h-[271px] object-cover" loader={() => item.preview} src={item.preview} alt="" width={450} height={271}/>
+            </div>
             <div className="flex flex-col justify-between items-end w-full">
                 <div className="w-full">
                     <div className="flex justify-between w-full">

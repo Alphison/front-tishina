@@ -6,6 +6,7 @@ import Provider from "./provider";
 import Modal from "@/components/modal/modal";
 import { Toaster } from "sonner";
 import ProviderAuth from "./providerAuth";
+import MenuBurger from "@/components/menuBurger/menuBurger";
 
 const plus = Plus_Jakarta_Sans({ subsets: ["latin", "cyrillic-ext"], weight: ["200" , "300" , "400" , "500" , "600" , "700" , "800"], variable: '--font-plus'});
 const mont = Montserrat({subsets: ["latin", "cyrillic-ext"], weight: ["200" , "300" , "400" , "500" , "600" , "700" , "800"], variable: '--font-mont'}) 
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Provider>
           <ProviderAuth>
             <Toaster position="bottom-right"/>
+            <MenuBurger />
             <Modal />
             <Header />
             {children}
