@@ -6,7 +6,7 @@ const options: CreateAxiosDefaults = {
     headers: {
         'Content-Type': 'application/json' 
     },
-    withCredentials: false
+    withCredentials: false,
 }
 
 export const axiosClassic = axios.create(options)
