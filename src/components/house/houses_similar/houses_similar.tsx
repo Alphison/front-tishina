@@ -15,7 +15,7 @@ export default function Houses({category_id, house_id}: {category_id: number, ho
             const items = data.filter(item => item.category.id === category_id && item.id != house_id)
             setNewData(items)
         }
-    }, [data])
+    }, [data, category_id, house_id])
 
     if(isLoading){
         return <div className="w-full flex justify-center py-[50px]"><Loader w={50}/></div>

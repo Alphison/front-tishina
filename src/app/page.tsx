@@ -75,7 +75,7 @@ export default function Home() {
           <div className="w-full max-w-[1238px] mx-auto px-[50px] 1238:px-[0px] flex flex-col items-center text-center">
             <p className="text-[24px] font-bold">No Spam Promise</p>
             <p className="text-[40px] font-bold leading-[56px]">Are you a landlord?</p>
-            <p className="mt-[16px] text-[16px]">Discover ways to increase your home's value and  get listed. No Spam.</p>
+            <p className="mt-[16px] text-[16px]">Discover ways to increase your homes value and  get listed. No Spam.</p>
             <form action="" method="post" className="flex items-center justify-between bg-white rounded-[8px] p-[16px] max-w-[543px] w-full mt-[32px]">
               <input type="text" placeholder="Enter your email address" className="outline-none text-[18px] text-black font-medium"/>
               <button className="py-[12px] px-[40px] rounded-[8px] font-bold text-[16px] bg-[#4E6F54] hover:bg-[#638a6a] hover:scale-[0.9] transition-all duration-300">Submit</button>

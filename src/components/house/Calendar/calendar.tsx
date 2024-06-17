@@ -41,7 +41,7 @@ export default function CalendarComponent({houseUsers}: {houseUsers: IHouseUsers
         setBookedDates(allDates)
         
 
-    }, [])    
+    }, [houseUsers])    
 
     if(!bookedDates){
 

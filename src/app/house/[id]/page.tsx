@@ -6,9 +6,19 @@ import CalendarComponent from "@/components/house/Calendar/calendar";
 import Block from "@/components/house/block";
 import Houses from "@/components/house/houses_similar/houses_similar";
 import Slider from "@/components/house/slider/slider";
+import { useHouses } from "@/hooks/useHouses";
 import { houseSerivce } from "@/services/house.service";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
+
+// export async function generateStaticParams(){
+//     const {data} = useHouses()
+
+//     return data?.map(house => ({
+//         id: house.id
+//     }))
+    
+// }
 
 export default function Page({params}: {params: {id: string}}) {
 

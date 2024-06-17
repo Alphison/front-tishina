@@ -17,11 +17,13 @@ export default function Slider({images}: {images: string[]}) {
         modules={[Autoplay]}
         className="mySwiper sliderHouse">
             {
-                images.map((image, i) => [
-                    <SwiperSlide className="houseSlide cursor-grab">
-                        <Image loader={() => image} key={i} src={image} width={1240} height={600} alt=""/>
-                    </SwiperSlide>
-                ])
+                images.map((image, i) => {
+                    return (
+                        <SwiperSlide className="houseSlide cursor-grab" key={i}>
+                            <Image loader={() => image} key={image} src={image} width={1240} height={600} alt=""/>
+                        </SwiperSlide>
+                    )                    
+                })
             }
         </Swiper>
     )
