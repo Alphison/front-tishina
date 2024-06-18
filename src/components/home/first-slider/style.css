@@ -10,3 +10,6 @@
 .swiper-pagination-bullet-active{
     background: white !important;
 }
+.mySwiper{
+    overflow: hidden !important;;
+}
