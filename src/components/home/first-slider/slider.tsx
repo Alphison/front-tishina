@@ -10,7 +10,7 @@ import './style.css'
 
 export default function Slider(){
     return (
-        <Swiper pagination={true} modules={[Pagination]} className="rounded-[10px] 600:rounded-[30px] overflow-hidden mt-[42px] mySwiper">
+        <Swiper pagination={true} modules={[Pagination]} className="rounded-[10px] 600:rounded-[30px] overflow-hidden mt-[42px] mySwiperFirst">
             <SwiperSlide>
                 <Slide name="Название дома" address="address"/>
             </SwiperSlide>
