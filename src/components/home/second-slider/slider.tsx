@@ -11,11 +11,29 @@ import Loader from "@/components/Loader";
 import Categories from "./Categories/Categories";
 import { useHouses } from "@/hooks/useHouses";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function SliderSecond () {    
     const [houses, setHouses] = useState<IHouse[]>([])
+
+    const [windowSize, setWindowSize] = useState({
+        width: window.innerWidth
+      });
+    
+      const handleResize = () => {
+        setWindowSize({
+          width: window.innerWidth
+        });
+      };
+    
+      useEffect(() => {
+        window.addEventListener('resize', handleResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
 
     const setCategoryIdFun = (id: number) => {
 
@@ -47,14 +65,21 @@ export default function SliderSecond () {
           
             <Swiper
                 loop={true}
-                slidesPerView={4}
+                slidesPerView={1}
                 spaceBetween={20}
-                // autoplay={{
-                //     delay: 2500,
-                //     disableOnInteraction: false,
-                // }}
-                navigation={true}
-                modules={[Autoplay, Navigation]}
+                navigation={windowSize.width > 600}
+                modules={[Autoplay, Navigation]}             
+                breakpoints={{
+                    350: {
+                        slidesPerView: 2
+                    },
+                    700: {
+                        slidesPerView: 3
+                    },
+                    900:{
+                        slidesPerView: 4
+                    }
+                }}   
                 className="mySwiper mySwiper-second relative"
             >
                 {

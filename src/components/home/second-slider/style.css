@@ -7,6 +7,13 @@
     cursor: pointer;
 }
 
+@media (max-width: 600px) {
+    .swiperSlide {
+        width: 220px !important;
+        height: 370px !important;
+    }
+}
+
 .swiperSlide:hover{
     scale: 1.1;
 }

@@ -3,6 +3,7 @@ import Category from "./category";
 import { useQuery } from "@tanstack/react-query";
 import Loader from "@/components/Loader";
 import { useState } from "react";
+import './style.css'
 
 export default function Categories({setCategoryIdFun}: {setCategoryIdFun: (id: number) => void}) {
     const {data, isLoading, error} = useQuery({
@@ -30,7 +31,7 @@ export default function Categories({setCategoryIdFun}: {setCategoryIdFun: (id: n
     }
 
     return (
-        <div className="flex border-b-[0.5px] border-[#272727]">
+        <div className="flex overflow-x-scroll border-b-[0.5px] border-[#272727] categories">
             <button onClick={() => clickCategoryHandle(0)}>
                 <Category text="Все" status={category_id === 0 ? true : false}/>
             </button>
