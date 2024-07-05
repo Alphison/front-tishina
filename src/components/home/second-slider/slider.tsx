@@ -17,21 +17,18 @@ import { useEffect, useState } from "react";
 export default function SliderSecond () {    
     const [houses, setHouses] = useState<IHouse[]>([])
 
-    const [windowSize, setWindowSize] = useState({
-        width: window.innerWidth
-      });
+    const [windowSize, setWindowSize] = useState(0);
     
       const handleResize = () => {
-        setWindowSize({
-          width: window.innerWidth
-        });
+        setWindowSize(window.innerWidth);
       };
     
-      useEffect(() => {
-        window.addEventListener('resize', handleResize);
+      useEffect(() => {       
+
+        document.addEventListener('resize', handleResize);
     
         return () => {
-          window.removeEventListener('resize', handleResize);
+          document.removeEventListener('resize', handleResize);
         };
       }, []);
 
@@ -67,7 +64,7 @@ export default function SliderSecond () {
                 loop={true}
                 slidesPerView={1}
                 spaceBetween={20}
-                navigation={windowSize.width > 600}
+                navigation={windowSize > 600}
                 modules={[Autoplay, Navigation]}             
                 breakpoints={{
                     350: {

@@ -6,19 +6,9 @@ import CalendarComponent from "@/components/house/Calendar/calendar";
 import Block from "@/components/house/block";
 import Houses from "@/components/house/houses_similar/houses_similar";
 import Slider from "@/components/house/slider/slider";
-import { useHouses } from "@/hooks/useHouses";
 import { houseSerivce } from "@/services/house.service";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
-
-// export async function generateStaticParams(){
-//     const {data} = useHouses()
-
-//     return data?.map(house => ({
-//         id: house.id
-//     }))
-    
-// }
 
 export default function Page({params}: {params: {id: string}}) {
 
@@ -48,18 +38,18 @@ export default function Page({params}: {params: {id: string}}) {
     return (
         <div className="overflow-hidden">      
             <CalendarComponent houseUsers={data.houseUsers}/>
-            <div className="w-[1240px] mx-auto">
+            <div className="max-w-[1288px] px-[50px] mx-auto">
                 <Slider images={images}/>
                 <div className="mt-[65px]">
                     <h1 className="font-mono text-[45px] font-semibold">{data.name}</h1>
                     <p className="font-mono text-[17px] font-semibold mt-[10px]">{data.address}</p>
-                    <div className="flex mt-[25px] gap-[72px]">
-                        <div className="flex-1">
+                    <div className="flex flex-wrap mt-[25px] gap-[72px]">
+                        <div className="flex-1 min-w-[260px]">
                             <p className="font-mono text-[17px] font-normal">{data.description}</p>
                         </div>
                         <div className="flex-1">
-                            <h2 className="font-mono text-[22px] font-bold text-[#4E6F54]">Что включено в стоимость</h2>
-                            <div className="grid grid-cols-2 gap-y-[30px] gap-x-[47px] mt-[30px]">
+                            <h2 className="font-mono text-[22px] font-bold text-[#4E6F54] min-w-[176px]">Что включено в стоимость</h2>
+                            <div className="flex flex-wrap gap-y-[30px] gap-x-[47px] mt-[30px]">
                                 {
                                     data.features.map((feature, i) => {
                                         return <Block feature={feature} key={i}/>

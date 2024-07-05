@@ -15,7 +15,7 @@ export default function BroniForm () {
     return (
         <div className="mt-[47px] flex flex-col gap-[20px]">
             <h1>Выберите даты бронирования:</h1>
-            <div className="flex gap-[11px]">
+            <div className="flex flex-wrap gap-[11px]">
                 <div className="bg-white py-[17px] px-[25px] flex gap-[19px] items-center rounded-[100px]">
                     <Image src={'/images/calendar-days.svg'} alt="" width={21} height={24}/>
                     <p onClick={() => setStatusHandle(1)} className="text-black text-[12px] font-normal font-mono cursor-pointer transition-all duration-300 hover:border-b hover:border-black active:scale-[0.8]">{in_date ? moment(in_date).format('DD.MM.YY') : 'Заезд'}</p>

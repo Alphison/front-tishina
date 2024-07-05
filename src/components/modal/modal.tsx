@@ -58,14 +58,14 @@ export default function Modal(){
          ${isOpen ? 'opacity-[1] z-[999999]' : 'opacity-0 z-[-1]'}`}
          onClick={() => setIsOpen()}
         >
-            <div className={`bg-[#303030] w-[350px] rounded-[16px] transition-all duration-300 p-[55px] ${isOpen ? 'translate-y-[0]' : 'translate-y-[-100%]'}`} onClick={(e) => e.stopPropagation()}>
+            <div className={`bg-[#303030] mx-[20px] w-[350px] rounded-[16px] transition-all duration-300 p-[55px] ${isOpen ? 'translate-y-[0]' : 'translate-y-[-100%]'}`} onClick={(e) => e.stopPropagation()}>
                 <h1 className='font-mono text-[30px] font-medium'>Вход</h1>
                 <form onSubmit={handleSubmit(submit)} className='mt-[27px] flex flex-col gap-[15px]'>
-                    <InputModal label='email' placeholder={'Email'} register={register}/>
+                    <InputModal type='text' label='email' placeholder={'Email'} register={register}/>
                     <div className='text-[#df5b5b]'>
                         <ErrorMessage errors={errors} name="Email"/>
                     </div>
-                    <InputModal label='password' placeholder={'Пароль'} register={register}/>
+                    <InputModal type='password' label='password' placeholder={'Пароль'} register={register}/>
                     <div className='text-[#df5b5b]'>
                         <ErrorMessage errors={errors} name="Password" />
                     </div>

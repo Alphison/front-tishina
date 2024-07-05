@@ -23,14 +23,14 @@ export default function Profile() {
 
     return (
         <div className="max-w-[1240px] w-full px-[50px] mx-auto mt-[50px]">
-            <h1 className="text-[48px] font-mono font-bold mb-[29px]">Контактная информация</h1>
+            <h1 className="text-[24px] 680:text-[48px] font-mono font-bold mb-[29px]">Контактная информация</h1>
             <div className="flex flex-col gap-[20px]">
                 <InfoBlock p1="Фамилия и имя:" p2={data?.surname + ' ' + data?.name}/>
                 <InfoBlock p1="Электронная почта:" p2={data?.email}/>
                 <InfoBlock p1="Номер телефона:" p2={data?.phone}/>
             </div>
-            <h1 className="mt-[120px] text-[48px] font-bold font-mono">Ваши забронированные дома:</h1>  
-            <div className="mt-[46px] flex flex-col gap-[40px]">
+            <h1 className="mt-[120px] text-[24px] 680:text-[48px] font-bold font-mono">Ваши забронированные дома:</h1>  
+            <div className="my-[46px] flex flex-col gap-[40px]">
                 {
                     data.houses.map((item: IProfileHouse, i: number) => {
                         return <HouseBlock house={item.house} start_date={item.check_in_date} end_date={item.check_out_date} key={i}/>
