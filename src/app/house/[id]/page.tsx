@@ -38,7 +38,7 @@ export default function Page({params}: {params: {id: string}}) {
     return (
         <div className="overflow-hidden">      
             <CalendarComponent houseUsers={data.houseUsers}/>
-            <div className="max-w-[1288px] px-[50px] mx-auto">
+            <div className="max-w-[1288px] px-[20px] mx-auto">
                 <Slider images={images}/>
                 <div className="mt-[65px]">
                     <h1 className="font-mono text-[45px] font-semibold">{data.name}</h1>

@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-        <div className="w-full max-w-[1288px] mx-auto px-[50px]">
+        <div className="w-full max-w-[1288px] mx-auto px-[20px]">
 
           <div className="flex flex-wrap gap-[33px] mt-[65px]">
             <GreenBlock text='Explore Australia'/>
@@ -53,9 +53,9 @@ export default function Home() {
           </div>
 
           <div className="mt-[109px]">
-            <div className="flex flex-wrap gap-8 justify-between w-[90%] items-center">
+            <div className="flex flex-wrap gap-8 justify-between 450:w-[90%] items-center">
                 <h1 className="text-[25px] 450:text-[40px] w-[444px] font-bold 450:leading-[56px]">We make it easy for tenants and landlords.</h1>
-                <p className="text-[16px] w-[400px] leading-[25px]">Whether it’s selling your current home, getting financing, or buying a new home, we make it easy  and efficient. The best part? you’ll save a bunch of money and time with our services.</p>
+                <p className="text-[14px] 450:text-[16px] 450:w-[400px] leading-[25px]">Whether it’s selling your current home, getting financing, or buying a new home, we make it easy  and efficient. The best part? you’ll save a bunch of money and time with our services.</p>
             </div>
             <WhiteBlocks />
           </div>
