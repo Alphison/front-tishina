@@ -7,10 +7,13 @@
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
-    .swiperSlide {
-        width: 220px !important;
-        height: 370px !important;
+@media (max-width: 450px) {
+    .swiperSlide{
+        width: 100% !important;
+    }
+
+    .swiperSlide img{
+        width: 100% !important;
     }
 }
 

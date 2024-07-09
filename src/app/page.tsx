@@ -18,7 +18,7 @@ export default function Home() {
 
           <Slider />
 
-          <h1 className="mt-[110px] text-[32px] 450:text-[48px] leading-[59px] font-medium">Explore where<br/>you want.</h1>
+          <h1 className="mt-[110px] text-[32px] 450:text-[48px] leading-[35px] 450:leading-[59px] font-medium">Explore where<br/>you want.</h1>
           <SliderSecond />
 
           <div className="mt-[95px] grid grid-column-2 gap-[20px]">

@@ -64,6 +64,9 @@ export default function SliderSecond () {
                 modules={[Autoplay, Navigation]}             
                 breakpoints={{
                     350: {
+                        slidesPerView: 1
+                    },
+                    450:{
                         slidesPerView: 2
                     },
                     700: {
