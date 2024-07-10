@@ -20,6 +20,7 @@ body {
   color: rgb(var(--foreground-rgb));
   background: #050505;
   color: white !important;
+  font-family: var(--font-mont);
 }
 
 body::-webkit-scrollbar{

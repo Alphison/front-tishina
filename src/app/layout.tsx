@@ -7,9 +7,6 @@ import Modal from "@/components/modal/modal";
 import { Toaster } from "sonner";
 import ProviderAuth from "./providerAuth";
 import MenuBurger from "@/components/menuBurger/menuBurger";
-import Head from "next/head";
-
-const plus = Plus_Jakarta_Sans({ subsets: ["latin", "cyrillic-ext"], weight: ["200" , "300" , "400" , "500" , "600" , "700" , "800"], variable: '--font-plus'});
 const mont = Montserrat({subsets: ["latin", "cyrillic-ext"], weight: ["200" , "300" , "400" , "500" , "600" , "700" , "800"], variable: '--font-mont'}) 
 
 export const metadata: Metadata = {
@@ -24,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${plus.variable} ${mont.variable} font-sans`}>
+      <body className={mont.variable}>
         <Provider>
           <ProviderAuth>
             <Toaster position="bottom-right"/>
