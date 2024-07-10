@@ -11,8 +11,8 @@ export default function Header(){
                 </Link>
                 <nav className="gap-[30px] items-center hidden 800:flex">
                     <Link href={'/profile'} className="text-[17px] font-medium">Профиль</Link>
-                    <Link href={'/'} className="text-[17px] font-medium">Unique Activities</Link>
-                    <Link href={'/'} className="text-[17px] font-medium">More</Link>
+                    <Link href={'/'} className="text-[17px] font-medium">Уникальные мероприятия</Link>
+                    <Link href={'/'} className="text-[17px] font-medium">Больше</Link>
                 </nav>
             </div>
             <BtnAuth />
