@@ -16,7 +16,7 @@ export default function MenuBurger() {
 
 
     return (
-        <div className={`fixed w-full ${isOpen ? 'bg-opacity-[0.5] z-[9999]' : 'bg-opacity-[0] z-[-1]'} h-full bg-black transition-all duration-300`} onClick={() => setIsOpenBurger()}>
+        <div className={`top-0 fixed w-full ${isOpen ? 'bg-opacity-[0.5] z-[9999]' : 'bg-opacity-[0] z-[-1]'} h-full bg-black transition-all duration-300`} onClick={() => setIsOpenBurger()}>
             <div className={`bg-black h-full w-[300px] ${isOpen ? 'translate-x-[0]' : 'translate-x-[-100%]'} transition-all duration-300`} onClick={(e) => e.stopPropagation()}>
                 <nav className="gap-[30px] p-[30px] flex flex-col">
                     <Link href={'/profile'} className="text-[17px] font-medium">Профиль</Link>

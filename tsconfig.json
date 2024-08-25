@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", ".next/types/**/*.ts", "src/components/house/BroniForm.tsx", "src/app/house/[id]/page.tsx", "src/components/header/header.tsx", "src/components/home/second-slider/Categories/Categories.tsx", "src/components/modal/modal.tsx", "src/components/header/btnAuth.tsx", "src/components/modal/input.tsx", "src/app/profile/page.tsx", "src/components/profile/infoBlock.tsx", "src/app/layout.tsx", "src/app/providerAuth.tsx", "src/components/profile/houseBlock.tsx", "src/components/menuBurger/menuBurger.tsx", "src/app/page.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", ".next/types/**/*.ts", "src/components/house/BroniForm.tsx", "src/app/house/[id]/page.tsx", "src/components/header/header.tsx", "src/components/home/second-slider/Categories/Categories.tsx", "src/components/modal/modal.tsx", "src/components/header/btnAuth.tsx", "src/components/modal/input.tsx", "src/app/profile/page.tsx", "src/components/profile/infoBlock.tsx", "src/app/layout.tsx", "src/app/providerAuth.tsx", "src/components/profile/houseBlock.tsx", "src/components/menuBurger/menuBurger.tsx", "src/app/page.tsx", "src/components/home/InfoUserForm"],
   "exclude": ["node_modules"]
 }

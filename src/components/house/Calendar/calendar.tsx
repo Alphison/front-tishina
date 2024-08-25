@@ -9,7 +9,7 @@ import Loader from "@/components/Loader";
 import { useCalendar } from "@/stores/useCalendar";
 
 export default function CalendarComponent({houseUsers}: {houseUsers: IHouseUsers[]}) {
-    const [bookedDates, setBookedDates] =useState<Date[] | null>(null)
+    const [bookedDates, setBookedDates] = useState<Date[] | null>(null)
     const status = useCalendar((state) => state.status)
     const input_date = useCalendar((state) => state.input_date)
     const setStatus = useCalendar((state) => state.setStatus)
@@ -61,7 +61,7 @@ export default function CalendarComponent({houseUsers}: {houseUsers: IHouseUsers
     };    
 
     return (
-        <div onClick={() => setStatus()} className={`fixed w-full h-full flex justify-center items-center bg-black z-[1000] top-0 px-[100px] transition-all duration-300 ${!status ? 'translate-y-[-100%]' : 'translate-y-0'}`}>
+        <div onClick={() => setStatus()} className={`fixed w-full h-full flex justify-center items-center bg-black z-[1000] top-0 px-[100px] transition-all duration-300 ${!status ? 'translate-y-[-1000px]' : 'translate-y-0'}`}>
             <div onClick={(e) => e.stopPropagation()}>
                 <Calendar
                     onChange={(e) => setDateHandle(e)}

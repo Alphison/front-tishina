@@ -1,0 +1,15 @@
+.swiper-pagination-bullets{
+    gap: 14px !important;
+    align-items: center;
+}
+.swiper-pagination-bullet{
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.473) !important;
+}
+.swiper-pagination-bullet-active{
+    background: white !important;
+}
+.mySwiperFirst{
+    overflow: hidden !important;;
+}

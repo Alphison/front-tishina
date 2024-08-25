@@ -1,4 +1,4 @@
-import { Path, UseFormRegister } from "react-hook-form"
+import { Path } from "react-hook-form"
 
 type IFormValues = {
     email: string,

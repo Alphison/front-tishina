@@ -1,3 +1,4 @@
+import { IAddition } from "./addition";
 import { ICategory } from "./category";
 import { IHouseUsers } from "./houseUsers";
 
@@ -12,6 +13,7 @@ export interface IHouse {
     small_description: string;
     images: IImage[];
     features: IFeature[];
+    additions: IAddition[];
     houseUsers: IHouseUsers[];        
 }
 

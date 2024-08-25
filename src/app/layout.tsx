@@ -7,6 +7,7 @@ import Modal from "@/components/modal/modal";
 import { Toaster } from "sonner";
 import ProviderAuth from "./providerAuth";
 import MenuBurger from "@/components/menuBurger/menuBurger";
+import Footer from "@/components/Footer/Footer";
 const mont = Montserrat({subsets: ["latin", "cyrillic-ext"], weight: ["200" , "300" , "400" , "500" , "600" , "700" , "800"], variable: '--font-mont'}) 
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function RootLayout({
             <Modal />
             <Header />
             {children}
+            <Footer />
           </ProviderAuth>
         </Provider>
       </body>

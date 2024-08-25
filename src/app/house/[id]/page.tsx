@@ -4,6 +4,7 @@ import Loader from "@/components/Loader";
 import BroniForm from "@/components/house/BroniForm";
 import CalendarComponent from "@/components/house/Calendar/calendar";
 import Block from "@/components/house/block";
+import Addition from "@/components/house/Addition";
 import Houses from "@/components/house/houses_similar/houses_similar";
 import Slider from "@/components/house/slider/slider";
 import { houseSerivce } from "@/services/house.service";
@@ -38,21 +39,29 @@ export default function Page({params}: {params: {id: string}}) {
     return (
         <div className="overflow-hidden">      
             <CalendarComponent houseUsers={data.houseUsers}/>
-            <div className="max-w-[1288px] px-[20px] mx-auto">
+            <div className="max-w-[1288px] px-[20px] mx-auto mt-[197px]">
                 <Slider images={images}/>
                 <div className="mt-[65px]">
                     <h1 className="font-mono text-[45px] font-semibold">{data.name}</h1>
                     <p className="font-mono text-[17px] font-semibold mt-[10px]">{data.address}</p>
-                    <div className="flex flex-wrap mt-[25px] gap-[72px]">
-                        <div className="flex-1 min-w-[260px]">
+                    <div className="flex flex-wrap mt-[25px] justify-between gap-[72px]">
+                        <div className="max-w-[560px]">
                             <p className="font-mono text-[17px] font-normal">{data.description}</p>
                         </div>
-                        <div className="flex-1">
+                        <div className="">
                             <h2 className="font-mono text-[22px] font-bold text-[#4E6F54] min-w-[176px]">Что включено в стоимость</h2>
                             <div className="flex flex-wrap gap-y-[30px] gap-x-[47px] mt-[30px]">
                                 {
                                     data.features.map((feature, i) => {
                                         return <Block feature={feature} key={i}/>
+                                    })
+                                }
+                            </div>
+                            <h2 className="font-mono text-[22px] font-bold text-[#4E6F54] min-w-[176px] mt-[30px]">Дополнительно</h2>
+                            <div className="flex flex-wrap gap-y-[30px] gap-x-[47px] mt-[30px]">
+                                {
+                                    data.additions.map((addition, i) => {
+                                        return <Addition name={addition.name} price={addition.price} key={i}/>
                                     })
                                 }
                             </div>

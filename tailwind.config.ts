@@ -16,6 +16,10 @@ const config: Config = {
       fontFamily: {
         mono: ["var(--font-mont)"],
       },
+      gridTemplateColumns: {
+        // Создаем кастомный шаблон колонок
+        'custom-layout': '1fr 2fr 1fr',
+      },
     },
     screens: {
       '400': '400px',
